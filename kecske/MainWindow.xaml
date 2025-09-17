@@ -1,0 +1,16 @@
+﻿<Window x:Class="kecske.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kecske"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="lb_jobb" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="498,36,112,181"/>
+        <ListBox x:Name="lb_bal" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="60,36,553,181"/>
+        <Button x:Name="btn_jobbra" Content="-->" HorizontalAlignment="Left" Margin="360,79,0,0" VerticalAlignment="Top" Click="btn_jobbra_Click"/>
+        <Button x:Name="btn_balra" Content="&lt;--" HorizontalAlignment="Left" Margin="360,130,0,0" VerticalAlignment="Top" Click="btn_balra_Click"/>
+
+    </Grid>
+</Window>
