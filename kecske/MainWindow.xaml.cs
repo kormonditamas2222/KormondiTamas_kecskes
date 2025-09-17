@@ -29,7 +29,20 @@ namespace kecske
         private void btn_jobbra_Click(object sender, RoutedEventArgs e)
         {
             var kijelolt = lb_bal.SelectedItem.ToString();
-            
+            if (kijelolt != "gazda")
+            {
+                balLista.Remove(kijelolt);
+                balLista.Remove("gazda");
+                jobbLista.Add(kijelolt);
+                jobbLista.Add("gazda");
+            }
+            else
+            {
+                balLista.Remove(kijelolt);
+                jobbLista.Add(kijelolt);
+            }
+            lb_bal.Items.Refresh();
+            lb_jobb.Items.Refresh();
             Gombok();
         }
 
